@@ -20,7 +20,7 @@ writeScript "update-index" ''
   if echo "$NIX_PATH" | grep -q "nixpkgs="; then
     nixpkgs=""
   else
-    nixpkgs="-I nixpkgs=${pkgs.path}"
+    nixpkgs="${pkgs.path}"
   fi
 
   mkdir -p "$HOME/.cache/comma/"
